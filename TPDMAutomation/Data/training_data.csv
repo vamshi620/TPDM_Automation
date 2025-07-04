@@ -1,0 +1,41 @@
+Comment,Action
+New employee starting next month,Add
+Hiring new team member for the project,Add
+Onboard new contractor,Add
+Adding additional resource to the team,Add
+New hire joining the department,Add
+Employee information needs updating,Update
+Change in employee status,Update
+Modify existing employee details,Update
+Update contact information,Update
+Revised employee classification,Update
+Employee is leaving the company,Term
+Termination effective immediately,Term
+End of contract,Term
+Employee resigned,Term
+Layoff due to restructuring,Term
+General inquiry about employee,Other
+Review pending for employee,Other
+Investigation in progress,Other
+Miscellaneous employee matter,Other
+Administrative note,Other
+New staff member assigned,Add
+Fresh recruit for the position,Add
+Additional headcount approved,Add
+Bring in new talent,Add
+Expand team with new hire,Add
+Personnel record correction needed,Update
+Adjust employee information,Update
+Refresh employee data,Update
+Amend existing record,Update
+Revise employee profile,Update
+Final day of employment,Term
+Contract conclusion,Term
+Staff reduction,Term
+Position elimination,Term
+Voluntary departure,Term
+Special case handling,Other
+Pending documentation,Other
+Follow-up required,Other
+Exception processing,Other
+Non-standard situation,Other
