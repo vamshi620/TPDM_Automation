@@ -90,20 +90,8 @@ namespace TPDMAutomation
         {
             try
             {
-                Console.WriteLine("Generating test data...");
-                
-                var testDataPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "TestData");
-                Directory.CreateDirectory(testDataPath);
-                
-                var sampleFilePath = Path.Combine(testDataPath, "sample_data.xlsx");
-                
-                TestDataGenerator.CreateSampleExcelFile(sampleFilePath);
-                
-                Console.WriteLine($"Test data created successfully at: {sampleFilePath}");
-                Console.WriteLine();
-                Console.WriteLine("To test the application, run:");
-                Console.WriteLine($"dotnet run -- --input \"{sampleFilePath}\" --output \"{Path.Combine(testDataPath, "Output")}\"");
-                
+                Console.WriteLine("Test data generation is not implemented yet.");
+                Console.WriteLine("Please provide your own Excel file with the required format.");
                 return 0;
             }
             catch (Exception ex)
