@@ -114,11 +114,13 @@ namespace TPDMAutomation.Utils
             Console.WriteLine("Optional Arguments:");
             Console.WriteLine("  --column, -c   Name of the delegate comments column (default: 'Delegate Comments')");
             Console.WriteLine("  --default, -d  Default category when no comments found (default: 'ADD')");
+            Console.WriteLine("  --generate-test-data  Generate sample test data for validation");
             Console.WriteLine("  --help, -h     Show this help message");
             Console.WriteLine();
             Console.WriteLine("Examples:");
             Console.WriteLine("  TPDMAutomation -i \"C:\\data\\input.xlsx\" -o \"C:\\output\"");
             Console.WriteLine("  TPDMAutomation --input \"./data.xlsx\" --output \"./results\" --column \"Comments\" --default \"UPDATE\"");
+            Console.WriteLine("  TPDMAutomation --generate-test-data");
             Console.WriteLine();
             Console.WriteLine("Description:");
             Console.WriteLine("  This application processes Excel files with multiple sheets, classifies delegate comments");

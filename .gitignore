@@ -15,6 +15,9 @@ obj/
 # Test data
 TestData/
 
+# Generated test Excel files (can be regenerated with --generate-test-data)
+Test/*.xlsx
+
 # NuGet Packages
 *.nupkg
 # NuGet Symbol Packages
