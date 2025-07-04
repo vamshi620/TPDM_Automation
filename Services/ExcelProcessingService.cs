@@ -192,52 +192,44 @@ namespace TPDMAutomation.Services
         {
             using var workbook = new XLWorkbook();
 
-            // Group by sheet name
-            var sheetGroups = categoryData.GroupBy(d => d.SheetName);
+            // Create a single worksheet for all data of this category
+            // Since all input sheets have the same column format, we can combine them
+            var worksheet = workbook.Worksheets.Add(category);
 
-            foreach (var sheetGroup in sheetGroups)
+            if (categoryData.Any())
             {
-                var sheetName = sheetGroup.Key;
-                var sheetData = sheetGroup.ToList();
+                // Create headers from the first row (all sheets have same columns)
+                var headers = categoryData.First().ColumnValues.Keys.ToList();
+                headers.Add("Predicted Category"); // Add the prediction column
 
-                // Create worksheet
-                var worksheet = workbook.Worksheets.Add(sheetName);
-
-                if (sheetData.Any())
+                // Write headers
+                for (int i = 0; i < headers.Count; i++)
                 {
-                    // Create headers
-                    var headers = sheetData.First().ColumnValues.Keys.ToList();
-                    headers.Add("Predicted Category"); // Add the prediction column
-
-                    // Write headers
-                    for (int i = 0; i < headers.Count; i++)
-                    {
-                        worksheet.Cell(1, i + 1).Value = headers[i];
-                        worksheet.Cell(1, i + 1).Style.Font.Bold = true;
-                    }
-
-                    // Write data rows
-                    for (int rowIndex = 0; rowIndex < sheetData.Count; rowIndex++)
-                    {
-                        var rowData = sheetData[rowIndex];
-                        
-                        // Write original column values
-                        for (int colIndex = 0; colIndex < headers.Count - 1; colIndex++)
-                        {
-                            var columnName = headers[colIndex];
-                            if (rowData.ColumnValues.ContainsKey(columnName))
-                            {
-                                worksheet.Cell(rowIndex + 2, colIndex + 1).Value = rowData.ColumnValues[columnName].ToString();
-                            }
-                        }
-
-                        // Write predicted category
-                        worksheet.Cell(rowIndex + 2, headers.Count).Value = rowData.PredictedCategory;
-                    }
-
-                    // Auto-fit columns
-                    worksheet.Columns().AdjustToContents();
+                    worksheet.Cell(1, i + 1).Value = headers[i];
+                    worksheet.Cell(1, i + 1).Style.Font.Bold = true;
                 }
+
+                // Write all data rows from all sheets into one sheet
+                for (int rowIndex = 0; rowIndex < categoryData.Count; rowIndex++)
+                {
+                    var rowData = categoryData[rowIndex];
+                    
+                    // Write original column values
+                    for (int colIndex = 0; colIndex < headers.Count - 1; colIndex++)
+                    {
+                        var columnName = headers[colIndex];
+                        if (rowData.ColumnValues.ContainsKey(columnName))
+                        {
+                            worksheet.Cell(rowIndex + 2, colIndex + 1).Value = rowData.ColumnValues[columnName].ToString();
+                        }
+                    }
+
+                    // Write predicted category
+                    worksheet.Cell(rowIndex + 2, headers.Count).Value = rowData.PredictedCategory;
+                }
+
+                // Auto-fit columns
+                worksheet.Columns().AdjustToContents();
             }
 
             // Save the workbook
