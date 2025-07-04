@@ -91,7 +91,7 @@ namespace TPDMAutomation.Utils
 
             if (string.IsNullOrWhiteSpace(config.DefaultCategory))
             {
-                config.DefaultCategory = "ADD";
+                config.DefaultCategory = "Add";
             }
 
             return config;
@@ -113,7 +113,7 @@ namespace TPDMAutomation.Utils
             Console.WriteLine();
             Console.WriteLine("Optional Arguments:");
             Console.WriteLine("  --column, -c   Name of the delegate comments column (default: 'Delegate Comments')");
-            Console.WriteLine("  --default, -d  Default category when no comments found (default: 'ADD')");
+            Console.WriteLine("  --default, -d  Default category when no comments found (default: 'Add')");
             Console.WriteLine("  --help, -h     Show this help message");
             Console.WriteLine();
             Console.WriteLine("Examples:");

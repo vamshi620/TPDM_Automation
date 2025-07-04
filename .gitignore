@@ -15,6 +15,10 @@ obj/
 # Test data
 TestData/
 
+# Test files and output
+test_data/
+test_output/
+
 # NuGet Packages
 *.nupkg
 # NuGet Symbol Packages

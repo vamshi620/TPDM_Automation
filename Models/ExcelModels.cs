@@ -54,6 +54,6 @@ namespace TPDMAutomation.Models
         /// <summary>
         /// Default category when no delegate comments column is found
         /// </summary>
-        public string DefaultCategory { get; set; } = "ADD";
+        public string DefaultCategory { get; set; } = "Add";
     }
 }

@@ -83,7 +83,7 @@ TPDMAutomation
 3. **Column Detection**: Searches for the "Delegate Comments" column in each sheet
 4. **Comment Processing**: 
    - If "Delegate Comments" column exists: Uses ML model to predict category
-   - If column is missing: Assigns the default category ("ADD") to all rows
+   - If column is missing: Assigns the default category ("Add") to all rows
 5. **Output Generation**: Creates four separate Excel files based on predicted categories:
    - `Add_Records.xlsx`
    - `Update_Records.xlsx` 
@@ -106,7 +106,7 @@ The ML model classifies comments into four categories:
 - `InputExcelPath`: Path to the input Excel file
 - `OutputDirectory`: Directory where output files will be created
 - `DelegateCommentsColumnName`: Name of the column containing comments (default: "Delegate Comments")
-- `DefaultCategory`: Category to use when no comments column is found (default: "ADD")
+- `DefaultCategory`: Category to use when no comments column is found (default: "Add")
 
 ## Error Handling
 
