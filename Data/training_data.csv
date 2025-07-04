@@ -1,0 +1,41 @@
+Comment,Label
+"Added new employee to the system",Add
+"New hire has been processed",Add
+"Created new account for the user",Add
+"Employee joining the team",Add
+"New member added to department",Add
+"Onboarding new staff member",Add
+"Fresh recruit has been enrolled",Add
+"Added to payroll system",Add
+"New employee ID generated",Add
+"Registration completed for new hire",Add
+"Updated employee information",Update
+"Modified contact details",Update
+"Changed department assignment",Update
+"Updated salary information",Update
+"Revised job title",Update
+"Modified work schedule",Update
+"Updated emergency contact",Update
+"Changed reporting manager",Update
+"Revised employee status",Update
+"Updated benefits enrollment",Update
+"Employee has been terminated",Term
+"Terminated due to policy violation",Term
+"End of employment contract",Term
+"Employee departure",Term
+"Terminated from position",Term
+"Left the organization",Term
+"Employment ended",Term
+"Terminated effective immediately",Term
+"Final day of work completed",Term
+"Contract termination processed",Term
+"Review pending",Other
+"Under investigation",Other
+"Data verification required",Other
+"Awaiting approval",Other
+"Pending documentation",Other
+"Requires manager review",Other
+"Additional information needed",Other
+"On hold for verification",Other
+"Escalated to HR",Other
+"Needs further clarification",Other
